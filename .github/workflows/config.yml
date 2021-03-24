@@ -41,13 +41,13 @@ jobs:
            ls
            cd source
            sudo docker container prune --force
-           sudo docker build . -t tgleech
+           sudo docker build . -t magneto
            
        - name: running Docker
          timeout-minutes: 340
          continue-on-error: true
          run: |
-            sudo docker run tgleech
+            sudo docker run magneto
            
        - name: Loop workflow
          continue-on-error: true
